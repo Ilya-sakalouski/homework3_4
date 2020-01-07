@@ -1,0 +1,764 @@
+2020-01-07 15:23:44,016 ERROR r.m.i.r.i.ConnectionRepositoryImpl [main] Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_231]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_231]
+	at ru.mail.ilya6697089.repository.impl.ConnectionRepositoryImpl.getConnection(ConnectionRepositoryImpl.java:27) [classes/:?]
+	at ru.mail.ilya6697089.service.impl.CarServiceImpl.add(CarServiceImpl.java:26) [classes/:?]
+	at ru.mail.ilya6697089.App.main(App.java:26) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJException: Unknown database 'jd2_homework3-4'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_231]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_231]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_231]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_231]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:787) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:712) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:680) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:128) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:540) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:202) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1340) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:157) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	... 9 more
+2020-01-07 15:44:29,776 ERROR r.m.i.s.i.CarServiceImpl [main] Table 'jd2_homework3-4.person' doesn't exist
+java.sql.SQLSyntaxErrorException: Table 'jd2_homework3-4.person' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at ru.mail.ilya6697089.repository.impl.CarRepositoryImpl.add(CarRepositoryImpl.java:27) ~[classes/:?]
+	at ru.mail.ilya6697089.service.impl.CarServiceImpl.add(CarServiceImpl.java:29) [classes/:?]
+	at ru.mail.ilya6697089.App.main(App.java:26) [classes/:?]
+2020-01-07 15:44:29,803 ERROR r.m.i.s.i.CarServiceImpl [main] Table 'jd2_homework3-4.person' doesn't exist
+java.sql.SQLSyntaxErrorException: Table 'jd2_homework3-4.person' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at ru.mail.ilya6697089.repository.impl.CarRepositoryImpl.findAll(CarRepositoryImpl.java:55) ~[classes/:?]
+	at ru.mail.ilya6697089.service.impl.CarServiceImpl.findAll(CarServiceImpl.java:47) [classes/:?]
+	at ru.mail.ilya6697089.App.main(App.java:28) [classes/:?]
+2020-01-07 16:12:45,256 ERROR r.m.i.r.i.ConnectionRepositoryImpl [main] Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_231]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_231]
+	at ru.mail.ilya6697089.repository.impl.ConnectionRepositoryImpl.getConnection(ConnectionRepositoryImpl.java:27) [classes/:?]
+	at ru.mail.ilya6697089.service.impl.CarServiceImpl.add(CarServiceImpl.java:26) [classes/:?]
+	at ru.mail.ilya6697089.App.main(App.java:26) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJException: Unknown database ''jd2_homework3-4''
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_231]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_231]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_231]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_231]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:787) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:712) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:680) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:128) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:540) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:202) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1340) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:157) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	... 9 more
+2020-01-07 16:40:48,826 ERROR r.m.i.s.i.Task1 [main] resources\DBFile.txt (Системе не удается найти указанный путь)
+java.io.FileNotFoundException: resources\DBFile.txt (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_231]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_231]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_231]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[?:1.8.0_231]
+	at ru.mail.ilya6697089.service.impl.Task1.runTask1(Task1.java:25) [classes/:?]
+	at ru.mail.ilya6697089.App.main(App.java:19) [classes/:?]
+2020-01-07 16:47:51,363 ERROR r.m.i.s.i.Task1 [main] .src\main\resources\DBFile.txt (Системе не удается найти указанный путь)
+java.io.FileNotFoundException: .src\main\resources\DBFile.txt (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_231]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_231]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_231]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[?:1.8.0_231]
+	at ru.mail.ilya6697089.service.impl.Task1.runTask1(Task1.java:25) [classes/:?]
+	at ru.mail.ilya6697089.App.main(App.java:19) [classes/:?]
+2020-01-07 16:48:39,631 INFO r.m.i.s.i.Task1 [main] C
+2020-01-07 16:48:39,635 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,635 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,635 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,635 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] B
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,636 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] `
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] j
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] d
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] 2
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] _
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] h
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,637 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,638 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,638 INFO r.m.i.s.i.Task1 [main] w
+2020-01-07 16:48:39,638 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,638 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,638 INFO r.m.i.s.i.Task1 [main] k
+2020-01-07 16:48:39,638 INFO r.m.i.s.i.Task1 [main] 3
+2020-01-07 16:48:39,638 INFO r.m.i.s.i.Task1 [main] -
+2020-01-07 16:48:39,639 INFO r.m.i.s.i.Task1 [main] 4
+2020-01-07 16:48:39,639 INFO r.m.i.s.i.Task1 [main] `
+2020-01-07 16:48:39,639 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,639 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,639 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,639 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] `
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] j
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] d
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] 2
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] _
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] h
+2020-01-07 16:48:39,640 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] w
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] k
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] 3
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] -
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] 4
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] `
+2020-01-07 16:48:39,641 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] C
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,642 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] B
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,643 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] (
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,644 INFO r.m.i.s.i.Task1 [main] V
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] C
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] H
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] (
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] 5
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] 0
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main] )
+2020-01-07 16:48:39,645 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,646 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,646 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,646 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,646 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,646 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,646 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,646 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] d
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] u
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,647 INFO r.m.i.s.i.Task1 [main] t
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,648 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,649 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main] p
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main] c
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,650 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,651 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] )
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,652 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,653 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] V
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] (
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] F
+2020-01-07 16:48:39,654 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] s
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] t
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] d
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] t
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] h
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,655 INFO r.m.i.s.i.Task1 [main] u
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] u
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] s
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] 9
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] 0
+2020-01-07 16:48:39,656 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,657 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,657 INFO r.m.i.s.i.Task1 [main] 1
+2020-01-07 16:48:39,657 INFO r.m.i.s.i.Task1 [main] 0
+2020-01-07 16:48:39,657 INFO r.m.i.s.i.Task1 [main] )
+2020-01-07 16:48:39,657 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,657 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,658 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] V
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,659 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] (
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] v
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,660 INFO r.m.i.s.i.Task1 [main] g
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main] s
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main] 1
+2020-01-07 16:48:39,661 INFO r.m.i.s.i.Task1 [main] 2
+2020-01-07 16:48:39,662 INFO r.m.i.s.i.Task1 [main] 0
+2020-01-07 16:48:39,662 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,662 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,663 INFO r.m.i.s.i.Task1 [main] 1
+2020-01-07 16:48:39,663 INFO r.m.i.s.i.Task1 [main] 3
+2020-01-07 16:48:39,663 INFO r.m.i.s.i.Task1 [main] )
+2020-01-07 16:48:39,664 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,664 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,664 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,664 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,664 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,664 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,665 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,665 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,665 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,665 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,665 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] V
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,666 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] (
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] h
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] B
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] y
+2020-01-07 16:48:39,667 INFO r.m.i.s.i.Task1 [main] s
+2020-01-07 16:48:39,668 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,668 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,668 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,668 INFO r.m.i.s.i.Task1 [main] 6
+2020-01-07 16:48:39,668 INFO r.m.i.s.i.Task1 [main] 0
+2020-01-07 16:48:39,668 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,668 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,669 INFO r.m.i.s.i.Task1 [main] 1
+2020-01-07 16:48:39,669 INFO r.m.i.s.i.Task1 [main] 1
+2020-01-07 16:48:39,669 INFO r.m.i.s.i.Task1 [main] )
+2020-01-07 16:48:39,669 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,669 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,669 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,669 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,670 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,670 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,671 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,671 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,671 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,671 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,671 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,671 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] V
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,672 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main] (
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main] h
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,673 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] W
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] t
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] c
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] h
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] 6
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] 0
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,674 INFO r.m.i.s.i.Task1 [main] 1
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] 2
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] )
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] I
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] N
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,675 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] V
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,676 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] (
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] Z
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] b
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] d
+2020-01-07 16:48:39,677 INFO r.m.i.s.i.Task1 [main] :
+2020-01-07 16:48:39,678 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,678 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,678 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,678 INFO r.m.i.s.i.Task1 [main] u
+2020-01-07 16:48:39,678 INFO r.m.i.s.i.Task1 [main] b
+2020-01-07 16:48:39,678 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] p
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] 9
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] 0
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] ,
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] 9
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] )
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,679 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] C
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,680 INFO r.m.i.s.i.Task1 [main] *
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] F
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] M
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,681 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main] B
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main] Y
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main] p
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,682 INFO r.m.i.s.i.Task1 [main] c
+2020-01-07 16:48:39,683 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,683 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,683 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,683 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,683 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,683 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,683 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,684 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,690 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,691 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,691 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] F
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] M
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,692 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] W
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] H
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] p
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] c
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] =
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] 9
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] U
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] P
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,693 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,694 INFO r.m.i.s.i.Task1 [main] =
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] H
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] t
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] !
+2020-01-07 16:48:39,695 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main] W
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main] H
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,696 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,698 INFO r.m.i.s.i.Task1 [main] a
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] =
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] v
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] n
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] g
+2020-01-07 16:48:39,699 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] s
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] '
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,700 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,701 INFO r.m.i.s.i.Task1 [main] P
+2020-01-07 16:48:39,701 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,701 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,701 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,701 INFO r.m.i.s.i.Task1 [main] B
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] L
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] f
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] i
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] l
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] R
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] O
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] P
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] D
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] T
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] B
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] A
+2020-01-07 16:48:39,702 INFO r.m.i.s.i.Task1 [main] S
+2020-01-07 16:48:39,706 INFO r.m.i.s.i.Task1 [main] E
+2020-01-07 16:48:39,706 INFO r.m.i.s.i.Task1 [main]  
+2020-01-07 16:48:39,706 INFO r.m.i.s.i.Task1 [main] `
+2020-01-07 16:48:39,706 INFO r.m.i.s.i.Task1 [main] j
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] d
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] 2
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] _
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] h
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] m
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] e
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] w
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] o
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] r
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] k
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] 3
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] -
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] 4
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] `
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] ;
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:48:39,707 INFO r.m.i.s.i.Task1 [main] 
+
+2020-01-07 16:57:02,850 INFO r.m.i.s.i.Task1 [main] CREATE DATABASE `jd2_homework3-4`;
+2020-01-07 16:57:02,855 INFO r.m.i.s.i.Task1 [main] USE `jd2_homework3-4`;
+2020-01-07 16:57:02,855 INFO r.m.i.s.i.Task1 [main] CREATE TABLE film (
+2020-01-07 16:57:02,855 INFO r.m.i.s.i.Task1 [main] name VARCHAR(50) NOT NULL,
+2020-01-07 16:57:02,855 INFO r.m.i.s.i.Task1 [main] duration INT NOT NULL,
+2020-01-07 16:57:02,855 INFO r.m.i.s.i.Task1 [main] price INT NOT NULL
+2020-01-07 16:57:02,855 INFO r.m.i.s.i.Task1 [main] );
+2020-01-07 16:57:02,856 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('Fast and the furious', 90, 10);
+2020-01-07 16:57:02,856 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('Avengers', 120, 13);
+2020-01-07 16:57:02,856 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('The Boys', 60, 11);
+2020-01-07 16:57:02,856 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('The Witcher', 60, 12);
+2020-01-07 16:57:02,856 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('Zombieland: Double Tap', 90, 9);
+2020-01-07 16:57:02,856 INFO r.m.i.s.i.Task1 [main] SELECT * FROM film ORDER BY price;
+2020-01-07 16:57:02,856 INFO r.m.i.s.i.Task1 [main] DELETE FROM film WHERE price=9;
+2020-01-07 16:57:02,857 INFO r.m.i.s.i.Task1 [main] UPDATE film SET name='Hot film!' WHERE name='Avengers';
+2020-01-07 16:57:02,857 INFO r.m.i.s.i.Task1 [main] DROP TABLE film;
+2020-01-07 16:57:02,857 INFO r.m.i.s.i.Task1 [main] DROP DATABASE `jd2_homework3-4`;
+2020-01-07 16:57:02,857 INFO r.m.i.s.i.Task1 [main] 
+2020-01-07 16:58:51,633 INFO r.m.i.s.i.Task1 [main] CREATE DATABASE `jd2_homework3-4`;
+2020-01-07 16:58:51,638 INFO r.m.i.s.i.Task1 [main] USE `jd2_homework3-4`;
+2020-01-07 16:58:51,640 INFO r.m.i.s.i.Task1 [main] CREATE TABLE film (
+2020-01-07 16:58:51,640 INFO r.m.i.s.i.Task1 [main] name VARCHAR(50) NOT NULL,
+2020-01-07 16:58:51,640 INFO r.m.i.s.i.Task1 [main] duration INT NOT NULL,
+2020-01-07 16:58:51,641 INFO r.m.i.s.i.Task1 [main] price INT NOT NULL
+2020-01-07 16:58:51,641 INFO r.m.i.s.i.Task1 [main] );
+2020-01-07 16:58:51,641 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('Fast and the furious', 90, 10);
+2020-01-07 16:58:51,641 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('Avengers', 120, 13);
+2020-01-07 16:58:51,641 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('The Boys', 60, 11);
+2020-01-07 16:58:51,641 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('The Witcher', 60, 12);
+2020-01-07 16:58:51,641 INFO r.m.i.s.i.Task1 [main] INSERT INTO film VALUES ('Zombieland: Double Tap', 90, 9);
+2020-01-07 16:58:51,642 INFO r.m.i.s.i.Task1 [main] SELECT * FROM film ORDER BY price;
+2020-01-07 16:58:51,642 INFO r.m.i.s.i.Task1 [main] DELETE FROM film WHERE price=9;
+2020-01-07 16:58:51,642 INFO r.m.i.s.i.Task1 [main] UPDATE film SET name='Hot film!' WHERE name='Avengers';
+2020-01-07 16:58:51,642 INFO r.m.i.s.i.Task1 [main] DROP TABLE film;
+2020-01-07 16:58:51,642 INFO r.m.i.s.i.Task1 [main] DROP DATABASE `jd2_homework3-4`;

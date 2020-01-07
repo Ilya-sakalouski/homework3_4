@@ -1,0 +1,17 @@
+CREATE DATABASE `jd2_homework3-4`;
+USE `jd2_homework3-4`;
+CREATE TABLE film (
+name VARCHAR(50) NOT NULL,
+duration INT NOT NULL,
+price INT NOT NULL
+);
+INSERT INTO film VALUES ('Fast and the furious', 90, 10);
+INSERT INTO film VALUES ('Avengers', 120, 13);
+INSERT INTO film VALUES ('The Boys', 60, 11);
+INSERT INTO film VALUES ('The Witcher', 60, 12);
+INSERT INTO film VALUES ('Zombieland: Double Tap', 90, 9);
+SELECT * FROM film ORDER BY price;
+DELETE FROM film WHERE price=9;
+UPDATE film SET name='Hot film!' WHERE name='Avengers';
+DROP TABLE film;
+DROP DATABASE `jd2_homework3-4`;
