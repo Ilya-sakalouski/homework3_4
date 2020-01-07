@@ -34,32 +34,33 @@ public class Task1 implements Task1Service {
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
-//        FileInputStream fis = null;
-//        InputStreamReader isr = null;
-//        int b;
-//
-//        try {
-//            fis = new FileInputStream("./src/main/resources/DBFile.txt");
-//            isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
-//            while ((b = isr.read()) != (-1)) {
-//                logger.info((char) b);
-//            }
-//        } catch (FileNotFoundException e) {
-//            logger.error(e.getMessage(), e);
-//        } catch (IOException e) {
-//            logger.error(e.getMessage(), e);
-//        } finally {
-//            try {
-//                assert fis != null;
-//                fis.close();
-//            } catch (IOException e) {
-//                logger.error(e.getMessage(), e);
-//            }
-//            try {
-//                assert isr != null;
-//                isr.close();
-//            } catch (IOException e) {
-//                logger.error(e.getMessage(), e);
-//            }
-        }
+        //        FileInputStream fis = null;
+        //        InputStreamReader isr = null;
+        //        int b;
+        //
+        //        try {
+        //            fis = new FileInputStream("./src/main/resources/DBFile.txt");
+        //            isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+        //            while ((b = isr.read()) != (-1)) {
+        //                logger.info((char) b);
+        //            }
+        //        } catch (FileNotFoundException e) {
+        //            logger.error(e.getMessage(), e);
+        //        } catch (IOException e) {
+        //            logger.error(e.getMessage(), e);
+        //        } finally {
+        //            try {
+        //                assert fis != null;
+        //                fis.close();
+        //            } catch (IOException e) {
+        //                logger.error(e.getMessage(), e);
+        //            }
+        //            try {
+        //                assert isr != null;
+        //                isr.close();
+        //            } catch (IOException e) {
+        //                logger.error(e.getMessage(), e);
+        //            }
     }
+
+}

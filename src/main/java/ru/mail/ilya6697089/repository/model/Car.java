@@ -2,7 +2,6 @@ package ru.mail.ilya6697089.repository.model;
 
 public class Car {
 
-
     private String name;
     private Integer age;
     private Boolean isActive;
@@ -37,8 +36,6 @@ public class Car {
                 ", isActive=" + isActive +
                 '}';
     }
-
-
 
     public static final class Builder {
 

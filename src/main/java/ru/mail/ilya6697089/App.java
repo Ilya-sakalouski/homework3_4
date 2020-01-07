@@ -18,17 +18,17 @@ public class App {
         Task1 task1 = new Task1();
         task1.runTask1();
 
-//        CarService carService = new CarServiceImpl();
-//
-//        Car car = Car.newBuilder()
-//                .name("test")
-//                .age(10)
-//                .isActive(true)
-//                .build();
-//        carService.add(car);
-//
-//        List<Car> vehicles = carService.findAll();
-//        vehicles.forEach(logger::info);
+        //        CarService carService = new CarServiceImpl();
+        //
+        //        Car car = Car.newBuilder()
+        //                .name("test")
+        //                .age(10)
+        //                .isActive(true)
+        //                .build();
+        //        carService.add(car);
+        //
+        //        List<Car> vehicles = carService.findAll();
+        //        vehicles.forEach(logger::info);
     }
 
 }

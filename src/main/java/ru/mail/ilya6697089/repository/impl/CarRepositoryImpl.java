@@ -64,7 +64,7 @@ public class CarRepositoryImpl implements CarRepository {
             statement.setString(1, searchName);
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {
-                   return getCar(rs);
+                    return getCar(rs);
                 }
             }
             return null;
